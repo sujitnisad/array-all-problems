@@ -1,0 +1,11 @@
+ int n = prices.size();
+        int mincost=INT_MAX;
+        int maxprofit=0;
+        for(int i=0;i<n;i++)
+        {
+            
+           mincost = min(prices[i],mincost);
+            int profit = prices[i] - mincost;
+            maxprofit = max(profit,maxprofit);
+        }
+        return maxprofit;
